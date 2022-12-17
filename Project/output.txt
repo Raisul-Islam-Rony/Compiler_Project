@@ -7,6 +7,12 @@ Variable Found c
 Identifier Declaration
 
 
+
+Single line comment found :: $ This is comment 
+
+
+ Multi line comment found :: ? Comment Declaration ?
+
 Variable Found a 
 
 Value of a : 2
@@ -57,6 +63,14 @@ Value of a : 5
  Condition True: 5
 
 
+Variable Found a 
+Variable Found a 
+
+Mod :5 %d 
+
+Value of a : 1
+
+
 
 Less Than :10 < 3 
 Variable Found b 
@@ -71,12 +85,12 @@ Variable Found b
 Variable Found a 
 Variable Found c 
 
-Addition :5 + 8 = 13 
+Addition :1 + 8 = 9 
 
-Value of b : 13
+Value of b : 9
 
 
-Else block Executed: 13
+Else block Executed: 9
 
 
 
@@ -84,16 +98,16 @@ Less Than :10 < 3
 Variable Found a 
 Variable Found a 
 
-Addition :5 + 1 = 6 
+Addition :1 + 1 = 2 
 
-Value of a : 6
+Value of a : 2
 
 
 
 Less Than :2 < 3 
 Variable Found b 
 
-Print Expression 13
+Print Expression 9
 
 
 Variable Found c 
@@ -111,9 +125,9 @@ Variable Found a
 Variable Found a 
 Variable Found b 
 
-Addition :6 + 13 = 19 
+Addition :2 + 9 = 11 
 
-Value of a : 19
+Value of a : 11
 
 
 WHILE Loop execution
@@ -125,9 +139,9 @@ Value of i : 12
 Variable Found b 
 Variable Found b 
 
-Subtraction :13-1=12 
+Subtraction :9-1=8 
  
-Value of b : 12
+Value of b : 8
 
 
 WHILE Loop execution
@@ -158,3 +172,4 @@ Value of k : 20
 Factorial of 6 is 720 
 
 10 Not a prime Number
+20 Is Even

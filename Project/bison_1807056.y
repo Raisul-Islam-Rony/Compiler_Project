@@ -52,7 +52,7 @@
 %token<num>NUMBER
 %token<text>VAR
 %token INTEGER CHAR FLOAT DOUBLE ADD MUL SUB DIV MOD BIGGER LESSER POW SIN COS TAN DISPLAY IF ELSE ELIF WHILE LOOP FACT PRIME
-%token SWITCH CASE DEFAULT
+%token SWITCH CASE DEFAULT CheckEven
 %type<num>expression
 %type<num>statement
 %nonassoc IFX
@@ -195,6 +195,17 @@ statement:
 
 				
 
+			}
+
+			| CheckEven '('NUMBER ')' {
+				if($3%2==0)
+				{
+					printf("%d Is Even",$3);
+				}
+				else
+				{
+					printf("%d Is ODD",$3);
+				}
 			}
 			
 

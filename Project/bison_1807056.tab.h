@@ -67,7 +67,8 @@
      SWITCH = 283,
      CASE = 284,
      DEFAULT = 285,
-     IFX = 286
+     CheckEven = 286,
+     IFX = 287
    };
 #endif
 
@@ -86,7 +87,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 90 "bison_1807056.tab.h"
+#line 91 "bison_1807056.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

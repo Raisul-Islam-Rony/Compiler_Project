@@ -1,8 +1,10 @@
 
 import program.h
 INTEGER a,b,c;
-DOUBLE x,y;
 
+$ This is comment 
+;
+? Comment Declaration ?
 
 
 a=2;
@@ -18,7 +20,6 @@ If(10 BIGGER 3)
 ;
 
 a= a MOD 2 ;
-
 If(10 LESSER 3)
 {
     b= b SUB 2 
@@ -68,6 +69,9 @@ Fact(6)
 ;
 
 IsPrime(10)
+;
+
+CheckEven(20)
 ;
 
 

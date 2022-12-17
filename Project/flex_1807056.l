@@ -10,6 +10,10 @@
 variable [a-zA-Z]+
 digit[0-9]
 
+SingleComment		[$].*
+
+MultiComment        [?].*[?]
+
 
 %%
 {digit}+	{yylval.num = atoi(yytext); return NUMBER; }
@@ -20,6 +24,8 @@ digit[0-9]
 "ADD"               {return ADD;}
 "Fact"              {return FACT;}
 "IsPrime"           {return PRIME ;}
+"CheckEven"         {return CheckEven;}
+
 
 "SUB"			 	{return SUB ;}
 "MUL" 				{ return MUL;}
@@ -51,6 +57,10 @@ digit[0-9]
 "CASE"              {return CASE;}
 "DEFAULT"           {return DEFAULT;}
 "import".*[.][h]       {printf("Header File Declaration\n");}
+
+{SingleComment}		{printf("\nSingle line comment found :: ");ECHO; printf("\n\n");}
+{MultiComment}		{printf("\n Multi line comment found :: ");ECHO;printf("\n\n");}
+
 
 
 
