@@ -18,6 +18,8 @@ digit[0-9]
 "DOUBLE"            {return DOUBLE;}
 "FLOAT"			 	{return FLOAT;}
 "ADD"               {return ADD;}
+"Fact"              {return FACT;}
+"IsPrime"           {return PRIME ;}
 
 "SUB"			 	{return SUB ;}
 "MUL" 				{ return MUL;}
@@ -36,16 +38,19 @@ digit[0-9]
 "}"                 {return *yytext;}
 "("                 {return *yytext;}
 ")"                 {return *yytext;}
-"If" 		  {return IF;}
-"Else" 		  {return ELSE;}
-"Elif"        {return ELIF;}
-"WHILE"		   {return WHILE;}
-"<"            {return *yytext;}
-">"            {return *yytext;}
-"LOOP"         {return LOOP;}
-[,]             {return *yytext;}
-[:]             {return *yytext;}
-
+"If" 		  		{return IF;}
+"Else" 		  		{return ELSE;}
+"Elif"        		{return ELIF;}
+"WHILE"		   		{return WHILE;}
+"<"            		{return *yytext;}
+">"            		{return *yytext;}
+"LOOP"         		{return LOOP;}
+[,]             	{return *yytext;}
+[:]             	{return *yytext;}
+"SWITCH"            {return SWITCH;}
+"CASE"              {return CASE;}
+"DEFAULT"           {return DEFAULT;}
+"import".*[.][h]       {printf("Header File Declaration\n");}
 
 
 

@@ -51,7 +51,8 @@
 
 %token<num>NUMBER
 %token<text>VAR
-%token INTEGER CHAR FLOAT DOUBLE ADD MUL SUB DIV MOD BIGGER LESSER POW SIN COS TAN DISPLAY IF ELSE ELIF WHILE LOOP
+%token INTEGER CHAR FLOAT DOUBLE ADD MUL SUB DIV MOD BIGGER LESSER POW SIN COS TAN DISPLAY IF ELSE ELIF WHILE LOOP FACT PRIME
+%token SWITCH CASE DEFAULT
 %type<num>expression
 %type<num>statement
 %nonassoc IFX
@@ -94,32 +95,32 @@ statement:
 
 		| IF '(' expression ')' '{' statement '}' %prec IFX {
 								if($3){
-									printf("\nvalue of expression in IF: %d\n",$6);
+									printf("\n Condition True: %d\n",$6);
 								}
 								else{
-									printf("\ncondition value zero in IF block\n");
+									printf("\nCondition False \n");
 								}
 								printf("\n\n");
 							}
 
 	| IF '(' expression ')' '{' statement  '}' ELSE '{' statement '}'  {
 								if($3){
-									printf("value of expression in IF: %d\n",$6);
+									printf("If Block Executed : %d\n",$6);
 								}
 								else{
-									printf("value of expression in ELSE: %d\n",$10);
+									printf("Else block Executed: %d\n",$10);
 								}
 								printf("\n\n");
 							}
 	| IF '(' expression ')' '{' statement  '}' ELIF '(' expression ')' '{' statement '}' ELSE '{' statement '}' {
 									if($3){
-									printf("value of expression in IF: %d\n",$6);
+									printf("If Block Executed : %d\n",$6);
 								}
 								else if($10){
-									printf("value of expression in ELIF: %d\n",$13);
+									printf("ElseIf Block Executed : %d\n",$13);
 								}
 								else{
-									printf("value of expression in ELSE: %d\n",$17);
+									printf("ELSE block executed : %d\n",$17);
 								}
 								printf("\n\n");
 	}
@@ -165,7 +166,39 @@ statement:
 					}
 			}
 
+			| FACT '('NUMBER ')' {
+				int i=1;
+				int sum=1;
+
+				for(int i=1; i<=$3; i++)
+				{
+					sum=sum*i;
+				}
+
+				printf("Factorial of %d is %d \n\n",$3, sum);
+			}
+			| PRIME '('NUMBER ')' {
+				int f=0;
+				for(int i=1; i<$3; i++)
+				{
+					if($3%i==0)
+					{
+						printf("%d Not a prime Number\n",$3);
+						f=1;
+						break;
+					}
+				}
+				if(!f)
+				{
+					printf("%d Is a Prime Number\n\n ",$3);
+				}
+
+				
+
+			}
 			
+
+
 	
 
 	
