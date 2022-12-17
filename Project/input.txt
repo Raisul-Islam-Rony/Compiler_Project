@@ -1,0 +1,57 @@
+INTEGER a,b,c;
+
+a=2;
+b=3;
+c=a POW b;
+If(10 BIGGER 3)
+{
+    a= a ADD 1 
+}
+;
+If(10 LESSER 3)
+{
+    b= b SUB 2 
+}
+
+Else
+{
+    b= a ADD c 
+}
+;
+
+If(10 LESSER 3)
+{
+    a= a ADD 1 
+}
+
+Elif (2 LESSER 3)
+{
+    DISPLAY(b)
+}
+
+Else
+{
+    c= c SUB 1 
+}
+;
+
+WHILE(10 < 13)
+{
+    a= a ADD b
+}
+;
+
+WHILE (10 > 6)
+{
+    b = b SUB 1
+}
+;
+
+LOOP(10 , 20, 1)
+{
+    a = 10 
+}
+;
+
+
+
